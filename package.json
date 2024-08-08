@@ -20,6 +20,8 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "react-query": "^3.39.3",
+        "react-router-dom": "^6.26.0",
         "react-simple-typewriter": "^5.0.1"
     }
 }

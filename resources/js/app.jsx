@@ -1,18 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Inscription from './Components/projectdjezzy/inscription';
-import Admin from './Components/projectdjezzy/admin/admin';
-import Posts from './Components/projectdjezzy/admin/admin';
+import './bootstrap';
+import '../css/app.css';
 
+import { createRoot } from 'react-dom/client';
+import { createInertiaApp } from '@inertiajs/react';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
-function App() {
-    return (
-        <div>
-            {/* <Inscription /> */}
-            {/* <Admin></Admin> */}
-            <Posts></Posts>
-        </div>
-    );
-}
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+createInertiaApp({
+    title: (title) => `${title} - ${appName}`,
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.jsx`, import.meta.glob('./Pages/**/*.jsx')),
+    setup({ el, App, props }) {
+        const root = createRoot(el);
+
+        root.render(<App {...props} />);
+    },
+    progress: {
+        color: '#4B5563',
+    },
+});
