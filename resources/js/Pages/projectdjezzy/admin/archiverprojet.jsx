@@ -1,10 +1,22 @@
 import "./admin.css";
 import search from '../images/search-line (2).png';
 import plus from '../images/plus.png';
+import Historiquevision from "./historiquevisionage";
+import { useState } from "react";
+
 
 function Archiverprojet(){
+    const [openpopup,setopenpopup]=useState(false);
+
+    const editpopup = (newopenpopup) => {
+        setopenpopup(newopenpopup);
+    };
     return(
      <div >
+         {
+    openpopup && <Historiquevision editpopup= {editpopup}></Historiquevision>
+    }
+
         <div className="search-bar">
     <input class="search" type="search" placeholder="Search Here" />
     <div className="search-img">
@@ -22,7 +34,7 @@ function Archiverprojet(){
         <div className="consultercontainer">
             <h1 className="consulterelement">Gestion Et Suivie Des Projet</h1>
             <h1 className="consulterdate">18/04/2024</h1>
-            <div className="aechiverplus">
+            <div className="aechiverplus" onClick={()=>setopenpopup(true)}>
                 <img src={plus} className="timer"></img>
                 <h1 className="affichertitle">Afficher</h1>
             </div>
@@ -32,7 +44,7 @@ function Archiverprojet(){
         <div className="consultercontainer">
             <h1 className="consulterelement">Gestion Et Suivie Des Projet</h1>
             <h1 className="consulterdate">18/04/2024</h1>
-            <div className="aechiverplus">
+            <div className="aechiverplus" onClick={()=>setopenpopup(true)}>
                 <img src={plus} className="timer"></img>
                 <h1 className="affichertitle">Afficher</h1>
             </div>
@@ -41,7 +53,7 @@ function Archiverprojet(){
         <div className="verticalline"></div><div className="consultercontainer">
             <h1 className="consulterelement">Gestion Et Suivie Des Projet</h1>
             <h1 className="consulterdate">18/04/2024</h1>
-            <div className="aechiverplus">
+            <div className="aechiverplus" onClick={()=>setopenpopup(true)}>
                 <img src={plus} className="timer"></img>
                 <h1 className="affichertitle">Afficher</h1>
             </div>
@@ -50,7 +62,7 @@ function Archiverprojet(){
         <div className="verticalline"></div><div className="consultercontainer">
             <h1 className="consulterelement">Gestion Et Suivie Des Projet</h1>
             <h1 className="consulterdate">18/04/2024</h1>
-            <div className="aechiverplus">
+            <div className="aechiverplus" onClick={()=>setopenpopup(true)}>
                 <img src={plus} className="timer"></img>
                 <h1 className="affichertitle">Afficher</h1>
             </div>
@@ -59,7 +71,7 @@ function Archiverprojet(){
         <div className="verticalline"></div><div className="consultercontainer">
             <h1 className="consulterelement">Gestion Et Suivie Des Projet</h1>
             <h1 className="consulterdate">18/04/2024</h1>
-            <div className="aechiverplus">
+            <div className="aechiverplus" onClick={()=>setopenpopup(true)}>
                 <img src={plus} className="timer"></img>
                 <h1 className="affichertitle">Afficher</h1>
             </div>
@@ -68,7 +80,7 @@ function Archiverprojet(){
         <div className="verticalline"></div><div className="consultercontainer">
             <h1 className="consulterelement">Gestion Et Suivie Des Projet</h1>
             <h1 className="consulterdate">18/04/2024</h1>
-            <div className="aechiverplus">
+            <div className="aechiverplus" onClick={()=>setopenpopup(true)}>
                 <img src={plus} className="timer"></img>
                 <h1 className="affichertitle">Afficher</h1>
             </div>

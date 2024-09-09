@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('username');
             $table->string('password');
             $table->string('imagesource');
+            $table->string('poste');
             $table->timestamps();
         });
     }

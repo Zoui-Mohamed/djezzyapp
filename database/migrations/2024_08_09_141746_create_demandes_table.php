@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->date('datedemande');
             $table->string('nomdemande');
+            $table->string('utlisateur');
             $table->string('discriptiondemande');
+            $table->unsignedBigInteger('employer_id');
+            $table->foreign('employer_id')->references('id')->on('employers')->onDelete('cascade');
             $table->timestamps();
         });
     }

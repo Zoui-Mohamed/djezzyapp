@@ -8,14 +8,14 @@
 .header{
     background-color: rgb(255, 0, 0);
     width: 102%;
-    height: 80px;
+    height: 100px;
     margin-top: -40px;
     margin-left: -10px;
 }
 .hey{
     color: white;
-    font-size: 27px;
-    padding-top: 32px;
+    font-size: 22px;
+    padding-top: 50px;
     padding-left: 80px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -23,19 +23,19 @@
 .icons{
     text-align: center;
     display: flex;
-    margin-top: -47px;
+    margin-top: -27px;
     margin-left: 600px;
 }
 
 .not{
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
 }
 
 .mes{
-    width: 25px;
-    height: 25px;
+    width: 84px;
+    height: 22px;
     padding-left: 60px;
     cursor: pointer;
 }
@@ -43,14 +43,14 @@
 .name{
     color: white;
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 3px;
     padding-left: 160px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .circle{
-    width: 33px;
-    height: 33px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: rgb(228, 228, 228);
     margin-top: 1px;
@@ -59,8 +59,9 @@
 }
 
 .user{
-    margin-top: 9px;
-    width: 17px;
+    margin-top: 7px;
+    margin-left: 7px;
+    width: 15px;
 }
 
 .navbar{
@@ -100,7 +101,7 @@
 .job{
     color: white;
     padding-left: 60px;
-    margin-top: -11px;
+    margin-top: -8px;
     opacity: 60%;
     font-size: 10px;
 }
@@ -117,12 +118,12 @@
     cursor: pointer;
     font-size: 12px;
     color: rgb(255, 255, 255);
-    margin-top: -12px;
+    margin-top: -2px;
     margin-left: 0px;
-    padding-left: 40px;
-    width: 170px;
+    padding-left: 60px;
+    width: 100%;
     height: 25px;
-    padding-top: 6px;
+    padding-top: 3px;
 }
 
 .sidemenu:hover{
@@ -148,10 +149,10 @@
     overflow: hidden;
     background: #ffffff;
     color: rgb(255, 0, 0);
-    width: 140px;
-    margin-left: 35px;
-    margin-top: 4px;
-    height: 35px;
+    width: 120px;
+    margin-left: 40px;
+    margin-top: 28px;
+    height: 30px;
    }
 
    
@@ -159,9 +160,9 @@
    
 
    .usere{
-    padding-right: 20px;
-    margin-bottom: -4px;
-    width: 16px;
+    margin-bottom: -16px;
+    width: 17px;
+    margin-left: -24px;
    }
 
    .logo{
@@ -427,13 +428,13 @@
 
 .infotitre{
     font-size: 10px;
-    padding-top: 6px;
+    padding-top: 8px;
     padding-left: 13px;
     color: brown;
 }
 
 .total{
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 14px;
     font-family: 'Arial Narrow Bold', sans-serif;
     opacity: 70%;
@@ -441,7 +442,7 @@
 }
 
 .number{
-    margin-top: -44px;
+    margin-top: -37px;
     margin-left:60px;
     font-size: 40px;
     opacity: 60%;
@@ -452,14 +453,14 @@
     width: 3px;
     height: 50px;
     background-color: #ff0000;
-    margin-top: -75px;
+    margin-top: -55px;
     margin-left: 120px;
 }
 
 .discr{
-    margin-top: -46px;
+    margin-top: -50px;
     margin-left: 130px;
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .allinfo{
@@ -497,6 +498,7 @@
     border-radius: 20px;
     margin-left: 30px;
     margin-top: 0px;
+    
 }
 
 .cotitle{
@@ -506,13 +508,13 @@
     color: brown;
     font-size: 12px;
     text-align: center;
-    height: 18px;
-    padding-top: 8px;
+    height: 22px;
+    padding-top: 2px;
 }
 
 .chart-two{
     background-color: rgb(255, 255, 255);
-    height: 130px;
+    height: 140px;
     width: 300px;
     box-shadow: 3px 3px 15px rgb(179, 179, 179);
     border-radius: 20px;
@@ -527,8 +529,8 @@
     color: rgb(255, 255, 255);
     font-size: 12px;
     text-align: center;
-    height: 18px;
-    padding-top: 8px;
+    height: 22px;
+    padding-top: 3px;
 }
 
 @media screen and (max-width:770px){
@@ -592,7 +594,7 @@
 }
 
 .searchim{
-    width: 20px;
+    width: 34px;
     padding-left: 17px;
     padding-top: 10px;
 }
@@ -608,7 +610,7 @@
 }
 
 .gestion-title{
-    padding-top: 7px;
+    padding-top: 10px;
     padding-left: 40px;
     opacity: 70%;
     font-size: 15px;
@@ -617,12 +619,13 @@
 .gestioncompte .ajouter{
     background-color: rgb(33, 161, 247);
     color: #ffffff;
-    width: 110px;
-    margin-left: 470px;
-    margin-top: 17px;
-    border-radius: 40px;
+    width: 100px;
+    margin-left: 490px;
+    margin-top: 10px;
+    border-radius: 10px;
     border-width: 0px;
-    height: 30px;
+    height: 25px;
+    font-size: 11px;
 }
 
 .gestioncompteposition{
@@ -632,6 +635,7 @@
 .titles{
     display: flex;
     margin-left: -40px;
+    margin-top: 18px;
 }
 
 .title-s{
@@ -650,17 +654,17 @@
 }
 
 .con-name{
-    margin-left: 44px;
+    margin-left: 40px;
     font-size: 10px;
     color: brown;
-    padding-top: 5px;
+    padding-top: 8px;
 }
 
 .details-but{
     background-color: rgb(33, 161, 247);
     color: #ffffff;
     width: 70px;
-    margin-top: 9px;
+    margin-top: 7px;
     cursor: pointer;
     border-radius: 30px;
     margin-left: 40px;
@@ -669,15 +673,15 @@
 }
 
 .details{
-     font-size: 14px;
+     font-size: 11px;
      color: #ffffff;
-     margin-top: -20px;
-     margin-left: 22px;
+     margin-top: -15px;
+     margin-left: 27px;
 }
 
 .butonimg{
-    padding-left: 6px;
-    width: 15px;
+    padding-left: 10px;
+    width: 24px;
     padding-top: 3px;
 }
 
@@ -816,6 +820,7 @@
 .formcontain{
     display: flex;
     margin-left: 260px;
+    margin-top: 40px;
 }
 
 .inputcontain{
@@ -864,7 +869,7 @@
 
   .input3{
     width: 400px;
-    height: 45px;
+    height: 85px;
     border: 2px solid rgb(253, 3, 3);
     border-radius: 10px;
     margin-top: 15px;
@@ -888,14 +893,14 @@
     border-radius: 30px;
     cursor: pointer;
     margin-left: 280px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .envoyer{
     color: #ffffff;
     font-size: 15px;
-    padding-left: 33px;
-    margin-top: 7px;
+    padding-left: 3px;
+    margin-top: 5px;
   }
 
   .consulterprojet{
@@ -992,7 +997,7 @@
     font-size: 13px;
     margin-left: 2px;
     color: rgb(255, 255, 255);
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   .dashboardone{
@@ -1021,7 +1026,7 @@
     color: #ffffff;
     font-size: 13px;
     margin-left: 110px;
-    padding-top: 6px;
+    padding-top: 3px;
 }
 
 .infocontain{
@@ -1061,7 +1066,7 @@
     box-shadow: 3px 3px 15px rgb(255, 40, 40);
     border-radius: 20px;
     margin-left: 220px;
-    margin-top: 29px;
+    margin-top: 20px;
 }
 
 .dashonetwocontain{
@@ -1091,6 +1096,7 @@
 .dashcharttwotitle{
     font-size: 14px;
     padding-left: 30px;
+    margin-top: 3px;
 }
 
 .calender-title{
@@ -1098,6 +1104,7 @@
     margin-left: 260px;
     margin-top: 30px;
     opacity: 60%;
+    font-weight: bolder;
 }
 
 .calcontains{
@@ -1115,6 +1122,7 @@
      height: 140px;
      border-radius: 30px;
      box-shadow: 3px 3px 15px rgb(124, 124, 124);
+     margin-top: 20px;
 }
 
 .caltitle{
@@ -1305,3 +1313,413 @@
         margin-top: 13px;
     }
 }
+
+.consulterencoursprojet{
+    background-color: rgb(83, 250, 153);
+    border-radius: 40px;
+    height: 20px;
+    width: 70px;
+    display: flex;
+    margin-top: 7px;
+    margin-right: 30px;
+    margin-left: 90px;
+}
+
+.con-name2{
+    margin-left: 60px;
+    font-size: 10px;
+    color: brown;
+    padding-top: 8px;
+}
+
+.aechiverpluss{
+    background-color: rgb(83, 136, 250);
+    border-radius: 40px;
+    height: 22px;
+    width: 90px;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 70px;
+    cursor: pointer;
+}
+
+.affichertitlee{
+    font-size: 11px;
+    margin-left: 13px;
+    color: rgb(255, 255, 255);
+    margin-top: 2px;
+}
+
+.up{
+    margin-top: -40px;
+}
+
+
+.aechiverplusss{
+    background-color: rgb(41, 241, 22);
+    border-radius: 40px;
+    height: 22px;
+    width: 90px;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.affichertitleee{
+    font-size: 11px;
+    margin-left: 23px;
+    color: rgb(255, 255, 255);
+    margin-top: 2px;
+}
+
+.containerajoter{
+    background-color: #ffffff;
+    height: 1000px;
+    width: 100%;
+    padding-top: 100px;
+}
+
+
+.ajoutercontainer{
+    display: flex;
+    width: 70%;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: 1px 8px 8px 8px rgb(168, 168, 168);
+    margin-top: -80px;
+    margin-left: 250px;
+    background-color: #ffffff;
+    z-index: 3;
+}
+
+.leftajoutercompte{
+    width: 67%;
+}
+
+.retourecompte{
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.backcompte{
+    width: 15px;
+    height: 15px;
+    padding-top: 3px;
+}
+
+.retourcompte{
+    font-size: 13px;
+    font-weight: bolder;
+    color: rgb(194, 50, 50);
+}
+
+.rightajoutercompte{
+    background-image: url('../images/happy-handsome-young-man.png');
+    /* background-color: #ff0000; */
+    background-size: cover;
+    background-position: 80%;
+    width: 47%;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.formulairecompte{
+    margin-left: 40px;
+    margin-top: 12px;
+}
+
+.nomprenomcompte{
+    font-size: 9px;
+    color: rgb(190, 49, 49);
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.inputcompte{
+    width: 320px;
+    height: 35px;
+    border: 2px solid rgb(253, 3, 3);
+    border-radius: 10px;
+}
+
+.inputcompte:focus {
+    color: rgb(0, 89, 255);
+    background-color: #ffffff;
+    outline-color: rgb(0, 89, 255);
+    box-shadow: -3px -3px 15px rgb(0, 89, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+
+  .flexcalender{
+    display: flex;
+  }
+
+  .flexcalender2{
+    display: flex;
+    margin-left: 40px;
+  }
+
+  .formulairecompte2{
+    margin-left: 4px;
+    margin-top: 12px;
+}
+
+  .inputcompte2{
+    width: 155px;
+    height: 35px;
+    border: 2px solid rgb(253, 3, 3);
+    border-radius: 10px;
+
+}
+
+.inputcompte2:focus {
+    color: rgb(0, 89, 255);
+    background-color: #ffffff;
+    outline-color: rgb(0, 89, 255);
+    box-shadow: -3px -3px 15px rgb(0, 89, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+::-webkit-file-upload-button{
+    width: 0px;
+    height: 0px;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+}
+
+.ajoutercomptetitle{
+    font-weight: 900;
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 120px;
+    margin-left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ajoutercomptetitle2{
+    font-weight: 900;
+    font-size: 15px;
+    color: #FE95A2;
+    margin-top: -5px;
+    margin-left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ajoutercompteparag{
+    width: 75%;
+    font-size: 8px;
+    margin-left: 41px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 7px;
+}
+
+
+.buttonajoutercompte{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 120px;
+    height: 30px;
+    border-radius: 9px;
+    margin-left: 104px;
+    margin-top: 20px;
+    color: #fc3636;
+    font-weight: 900;
+    font-size: 13px;
+    padding-top: 6px;
+    padding-left: 17px;
+}
+
+.buttonajoutercompteimg{
+    width: 17px;
+    height: 17px;
+}
+
+
+
+
+.details-gespro{
+    color: brown;
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+.consulterencourstache{
+    background-color: rgb(83, 250, 153);
+    border-radius: 40px;
+    height: 20px;
+    width: 70px;
+    display: flex;
+    margin-top: 7px;
+    margin-right: 30px;
+    margin-left: 70px;
+}
+
+
+
+.retourehistory{
+    margin-left: 250px;
+    cursor: pointer;
+    display: flex;
+    margin-top: 25px;
+}
+
+.hystorycon{
+    background-color: rgb(221, 221, 221);
+    height: 1000px;
+}
+
+.calndriercontainer2{
+    background-color: #ffffff;
+    width: 95%;
+     margin-left: 2%;
+     height: 160px;
+     border-radius: 30px;
+     box-shadow: 3px 3px 15px rgb(124, 124, 124);
+     margin-top: 20px;
+    }
+
+    .flebx{
+        display: flex;
+    }
+
+.calparagraph{
+    font-size: 11px;
+    width: 73%;
+    margin-left: 60px;
+}
+
+.call{
+    margin-top: 20px;
+}
+
+.caltit{
+    margin-right: 260px;
+    width: 90%;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.flexbut{
+    display: flex;
+}
+
+.buttondashboard{
+    background-color: rgb(255, 42, 42);
+    display: flex;
+    color: white;
+    font-size: 10px;
+    width: 90px;
+    border-radius: 20px;
+    height: 24px;
+    padding-top: 5px;
+    padding-left: 6px;
+    margin-top: 8px;
+}
+
+.buttondashboard2{
+    background-color: rgb(57, 174, 252);
+    display: flex;
+    color: white;
+    font-size: 10px;
+    width: 90px;
+    border-radius: 20px;
+    height: 24px;
+    padding-top: 5px;
+    padding-left: 6px;
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+.buttondashboardimg{
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+}
+
+
+.logo-loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255); /* Slight background overlay */
+}
+
+.logo-animation img {
+    width: 100px; /* Adjust logo size */
+    animation: rotateLogo 2s linear infinite; /* Example animation */
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.chengefont{
+    font-size: 9px;
+}
+.chengefont2{
+    font-size: 5px;
+}
+.changesize{
+    font-size: 9px;
+}
+.changesize2{
+    font-size: 9px;
+    margin-top: 0px;
+}
+.explaine{
+    margin-top: -120px;
+    font-size: 9px;
+    margin-left: 170px;
+    font-weight: bolder;
+
+}
+
+.explaine2{
+    margin-top: -120px;
+    font-size: 9px;
+    margin-left: 150px;
+    font-weight: bolder;
+
+}
+
+.ex1{
+  color: #0088FE;
+  padding-top: 4px;
+
+}
+
+.ex2{
+    color: #00C49F;
+    padding-top: 7px;
+  }
+  
+  .ex3{
+    color: #FFBB28;
+    padding-top: 7px;
+
+  }
+  
+  .ex4{
+    color: #FF8042;
+    padding-top: 7px;
+
+  }

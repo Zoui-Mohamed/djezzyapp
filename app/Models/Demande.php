@@ -10,7 +10,15 @@ class Demande extends Model
     use HasFactory;
     protected $primarykey='id_demande';
 
-    protected $table='demande';
+    protected $table='demandes';
+
+    protected $fillable = [
+        'datedemande',
+        'nomdemande',
+        'utlisateur',
+        'discriptiondemande',
+        'employer_id',
+    ];
 
     public function employers(){
         return $this->belongsToMany(Employer::class,'employer_demande','id_employer','id_demande');

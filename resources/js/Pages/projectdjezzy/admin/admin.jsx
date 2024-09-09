@@ -30,6 +30,7 @@ function Admin() {
        const [show,setshow]=useState(true);
        const [color,setcolor]=useState("brown");
 
+
   const onclick=()=>{
        if (show == false) {
            setshow(true);
@@ -88,7 +89,7 @@ function Admin() {
       {/* <Gestioncompte></Gestioncompte> */}
       {/* <Envoyerdemande></Envoyerdemande> */}
       {/* <Consulterprojet></Consulterprojet> */}
-      {/* <Archiverprojet></Archiverprojet> */}
+      <Archiverprojet></Archiverprojet>
       {/* <Dashboards></Dashboards> */}
       {/* <Calendrier></Calendrier> */}
         </div>

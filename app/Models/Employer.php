@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Employer extends Model
+class Employer extends Authenticatable
 {
     use HasFactory;
     protected $primarykey='id_employer';
-    protected $table='employer';
+    protected $table='employers';
 
     public function messages(){
         return $this->belongsToMany(Message::class,'employer_message','id_employer','id_message');

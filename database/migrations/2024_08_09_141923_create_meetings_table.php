@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('titremeeting');
             $table->string('utilisateurmeeting');
             $table->string('discriptionmeeting');
+            $table->string('membremeeting');
             $table->unsignedBigInteger('chefprojet_id');
             $table->foreign('chefprojet_id')->references('id')->on('chefprojets')->onDelete('cascade');
             $table->timestamps();

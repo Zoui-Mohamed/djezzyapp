@@ -11,6 +11,16 @@ class Meeting extends Model
 
     protected $primarykey='id_meeting';
 
+    protected $table='meetings';
+
+    protected $fillable = [
+        'datemeeting',
+        'titremeeting',
+        'utilisateurmeeting',
+        'discriptionmeeting',
+        'membremeeting',
+        'chefprojet_id',
+    ];
 
     public function chefprojets()
     {

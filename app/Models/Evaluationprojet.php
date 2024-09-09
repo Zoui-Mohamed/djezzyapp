@@ -10,6 +10,12 @@ class Evaluationprojet extends Model
     use HasFactory;
 
     protected $primarykey='id_evaluationprojet';
+    
+    protected $fillable = [
+        'noteprojet',
+        'commentairedeprojet',
+        'id_directeurgenerale',
+    ];
 
     public function directeurgenerales()
     {

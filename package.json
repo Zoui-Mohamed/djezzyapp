@@ -20,8 +20,12 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "@inertiajs/progress": "^0.2.7",
+        "nprogress": "^0.2.0",
+        "react-loader-spinner": "^6.1.6",
         "react-query": "^3.39.3",
         "react-router-dom": "^6.26.0",
-        "react-simple-typewriter": "^5.0.1"
+        "react-simple-typewriter": "^5.0.1",
+        "recharts": "^2.12.7"
     }
 }
