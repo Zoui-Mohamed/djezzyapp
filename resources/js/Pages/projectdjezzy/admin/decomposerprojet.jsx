@@ -5,6 +5,7 @@ import evaluation from "../images/list-ordered.png";
 import puzzle from "../images/puzzle-fill.png";
 import {useState} from 'react';
 import Decomposer from './decomposer'
+import Chefprojet from "./chefdeprojet";
 
 
 
@@ -16,6 +17,7 @@ function Decomposerprojet(){
     };
 
     return(
+        <Chefprojet>
      <div >
          {
     openpopup && <Decomposer editpopup= {editpopup}></Decomposer>
@@ -85,6 +87,7 @@ function Decomposerprojet(){
         </div>
     </div>
     </div>
+    </Chefprojet>
     )
 }
 

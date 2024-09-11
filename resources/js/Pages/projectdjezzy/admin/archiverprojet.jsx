@@ -3,6 +3,7 @@ import search from '../images/search-line (2).png';
 import plus from '../images/plus.png';
 import Historiquevision from "./historiquevisionage";
 import { useState } from "react";
+import Admin from "./admin";
 
 
 function Archiverprojet(){
@@ -12,6 +13,7 @@ function Archiverprojet(){
         setopenpopup(newopenpopup);
     };
     return(
+        <Admin>
      <div >
          {
     openpopup && <Historiquevision editpopup= {editpopup}></Historiquevision>
@@ -88,6 +90,7 @@ function Archiverprojet(){
         </div>
     </div>
     </div>
+    </Admin>
     )
 }
 

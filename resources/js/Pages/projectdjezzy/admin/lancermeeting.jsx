@@ -2,6 +2,7 @@ import "./admin.css";
 import illustartion from'../images/illustration.png';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { useState } from "react";
+import Chefprojet from "./chefdeprojet";
 
 
 function Meeting(){
@@ -21,6 +22,7 @@ const submit = (e) => {
     });
 };
     return(
+        <Chefprojet>
      <div >
       <form onSubmit={submit}>
        <h1 className="helpstyle">Let's Help You</h1>
@@ -41,6 +43,7 @@ const submit = (e) => {
        </div>
        </form>
     </div>
+    </Chefprojet>
     )
 }
 

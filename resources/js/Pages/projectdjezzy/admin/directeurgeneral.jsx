@@ -28,9 +28,13 @@ import Messenger from "./messenger";
 import { useState } from "react";
 import Gestionprojet from "./gestionprojet";
 import Evaluerprojet from "./evaluerprojet";
+import { Link, usePage} from '@inertiajs/react';
+import NavLink from '@/Components/NavLink';
 
+function Directeurgenerale({children}) {
+  const {url}=usePage();
+  const isactive=(route)=>url.includes(route);
 
-function Directeurgenerale() {
        const [image,setimage]=useState(mnu);
        const [show,setshow]=useState(true);
        const [color,setcolor]=useState("brown");
@@ -76,22 +80,51 @@ function Directeurgenerale() {
         <h1 className="username">Zoui Mohamed</h1>
         <p className="job">DIRECTEUR GENERALE</p>
         <div className="space">
-        <h1 className="sidemenu" onClick={backgroundchange}><img src={home} className="usere"></img>Acceuil</h1>
-        <h1 className="sidemenu"><img src={puzzle} className="usere"></img>Gestion Projet</h1>
-        <h1 className="sidemenu"><img src={send} className="usere"></img>Envoyer Demande</h1>
-        <h1 className="sidemenu"><img src={consulter} className="usere"></img>Consulter Projet</h1>
-        <h1 className="sidemenu"><img src={evaluation} className="usere"></img>Evaluer Projet</h1>
-        <h1 className="sidemenu"><img src={dashboard} className="usere"></img>Dashboard</h1>
-        <h1 className="sidemenu"><img src={calendar} className="usere"></img>Calendrier</h1>
+        <h1 className="sidemenu" style={{background : isactive('/dg/acceulledg')? 'red':'#831010'}}>
+        <Link href={route('acceulledg.index')} active={route().current('acceulledg.index')}>
+        <img src={home} className="usere"></img>Acceuil
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/dg/gestionprojet')? 'red':'#831010'}}>
+        <Link href={route('gestionprojet.index')} active={route().current('gestionprojet.index')}>
+        <img src={puzzle} className="usere"></img>Gestion Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/dg/envoyerdemandedg')? 'red':'#831010'}}>
+        <Link href={route('envoyerdemandedg.index')} active={route().current('envoyerdemandedg.index')}>
+        <img src={send} className="usere"></img>Envoyer Demande
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/dg/consulterprojetdg')? 'red':'#831010'}}>
+        <Link href={route('consulterprojetdg.index')} active={route().current('consulterprojetdg.index')}>
+          <img src={consulter} className="usere"></img>Consulter Projet
+          </Link>
+          </h1>
+        <h1 className="sidemenu" style={{background : isactive('/dg/evaluerprojet')? 'red':'#831010'}}>
+        <Link href={route('evaluerprojet.index')} active={route().current('evaluerprojet.index')}>
+        <img src={evaluation} className="usere"></img>Evaluer Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/dg/dashboarddg')? 'red':'#831010'}}>
+        <Link href={route('dashboarddg.index')} active={route().current('dashboarddg.index')}>
+        <img src={dashboard} className="usere"></img>Dashboard
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/dg/calendrierdg')? 'red':'#831010'}}>
+        <Link href={route('calendrierdg.index')} active={route().current('calendrierdg.index')}>
+        <img src={calendar} className="usere"></img>Calendrier
+        </Link>
+        </h1>
         </div>
         <button className="button1"> <span className="bute">Quitter</span>
         </button>
         </div>)
         }
         <div className="index">
+        {children}
         {/* <Acceulle></Acceulle> */}
         {/* <Gestionprojet></Gestionprojet> */}
-      <Envoyerdemande></Envoyerdemande>
+      {/* <Envoyerdemande></Envoyerdemande> */}
       {/* <Consulterprojet></Consulterprojet> */}
       {/* <Evaluerprojet></Evaluerprojet> */}
       {/* <Dashboards></Dashboards> */}

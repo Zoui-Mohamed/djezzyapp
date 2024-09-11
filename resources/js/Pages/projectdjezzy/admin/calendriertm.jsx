@@ -1,10 +1,12 @@
-import Admin from "./admin";
 import "./admin.css";
+import Directeurgenerale from "./directeurgeneral";
+import Employer from "./employer";
+import Traficmanager from "./traficmanager";
 
 
-function Calendrier(){
+function Calendriertm(){
     return(
-        <Admin>
+        <Traficmanager>
      <div >
         <h1 className="calender-title">Calendrier Des Meeting</h1>
         <div className="calcontains">
@@ -47,9 +49,9 @@ function Calendrier(){
             </div>
         </div>
     </div>
-    </Admin>
+    </Traficmanager>
     )
 }
 
 
-export default Calendrier;
+export default Calendriertm;

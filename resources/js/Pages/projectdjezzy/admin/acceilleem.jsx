@@ -2,7 +2,8 @@ import "./admin.css";
 import { PieChart, Pie, Sector, Cell} from 'recharts';
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import Admin from "./admin";
+import Chefprojet from "./chefdeprojet";
+import Employer from "./employer";
 
 
 
@@ -124,11 +125,11 @@ const data3 = [
 
 
 
-function Acceulle(){
+function Acceulleem(){
   const demoUrl = 'https://codesandbox.io/p/sandbox/simple-area-chart-4y9cnl';
 
 
-    return  <Admin>
+    return  <Employer>
     <div>
          <div className="allinfo">
           <div className="info">
@@ -240,8 +241,8 @@ function Acceulle(){
           </div>
         </div>
     </div>
-    </Admin>
+    </Employer>
 }
 
 
-export default Acceulle;
+export default Acceulleem;

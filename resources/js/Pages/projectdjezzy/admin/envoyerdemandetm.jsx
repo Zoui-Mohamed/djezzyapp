@@ -2,10 +2,12 @@ import "./admin.css";
 import illustartion from'../images/illustration.png';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { useState } from "react";
-import Admin from "./admin";
+import Directeurgenerale from "./directeurgeneral";
+import Employer from "./employer";
+import Traficmanager from "./traficmanager";
 
 
-function Envoyerdemande(){
+function Envoyerdemandetm(){
   const { data, setData, post, processing, errors, reset } = useForm({
     utlisateur: '',
     nomdemande: '',
@@ -21,7 +23,7 @@ const submit = (e) => {
     });
 };
     return(
-        <Admin>
+        <Traficmanager>
      <div >
       <form onSubmit={submit}>
        <h1 className="helpstyle">Let's Help You</h1>
@@ -39,9 +41,9 @@ const submit = (e) => {
        </div>
        </form>
     </div>
-    </Admin>
+    </Traficmanager>
     )
 }
 
 
-export default Envoyerdemande;
+export default Envoyerdemandetm;

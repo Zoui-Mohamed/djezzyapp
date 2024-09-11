@@ -33,11 +33,16 @@ import Evaluerprojet from "./evaluerprojet";
 import Decomposerprojet from "./decomposerprojet";
 import Meeting from "./lancermeeting";
 // import { Triangle } from 'react-spinners/Triangle';
+import { Link, usePage} from '@inertiajs/react';
+import NavLink from '@/Components/NavLink';
 
 
 
 
-function Chefprojet() {
+function Chefprojet({children}) {
+  const {url}=usePage();
+  const isactive=(route)=>url.includes(route);
+
        const [image,setimage]=useState(mnu);
        const [show,setshow]=useState(true);
        const [color,setcolor]=useState("brown");
@@ -84,21 +89,46 @@ function Chefprojet() {
         <h1 className="username">Zoui Mohamed</h1>
         <p className="job">CHEF DE PROJET</p>
         <div className="space">
-        <h1 className="sidemenu" onClick={backgroundchange}><img src={home} className="usere"></img>Acceuil</h1>
-        <h1 className="sidemenu"><img src={pie} className="usere"></img>Decomposer Projet</h1>
-        <h1 className="sidemenu"><img src={meeting} className="usere"></img>Lancer Meeting</h1>
-        <h1 className="sidemenu"><img src={consulter} className="usere"></img>Consulter Projet</h1>
-        <h1 className="sidemenu"><img src={dashboard} className="usere"></img>Dashboard</h1>
-        <h1 className="sidemenu"><img src={calendar} className="usere"></img>Calendrier</h1>
+        <h1 className="sidemenu" style={{background : isactive('/chefprojet/acceillecp')? 'red':'#831010'}}>
+        <Link href={route('acceillecp.index')} active={route().current('acceillecp.index')}>
+        <img src={home} className="usere"></img>Acceuil
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/chefprojet/decomposerprojet')? 'red':'#831010'}}>
+        <Link href={route('decomposerprojet.index')} active={route().current('decomposerprojet.index')}>
+        <img src={pie} className="usere"></img>Decomposer Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/chefprojet/lancermeeting')? 'red':'#831010'}}>
+        <Link href={route('lancermeeting.index')} active={route().current('lancermeeting.index')}>
+        <img src={meeting} className="usere"></img>Lancer Meeting
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/chefprojet/consulterprojetcp')? 'red':'#831010'}}>
+        <Link href={route('consulterprojetcp.index')} active={route().current('consulterprojetcp.index')}>
+        <img src={consulter} className="usere"></img>Consulter Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/chefprojet/dashboardcp')? 'red':'#831010'}}>
+        <Link href={route('dashboardcp.index')} active={route().current('dashboardcp.index')}>
+        <img src={dashboard} className="usere"></img>Dashboard
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/chefprojet/calendriercp')? 'red':'#831010'}}>
+        <Link href={route('calendriercp.index')} active={route().current('calendriercp.index')}>
+        <img src={calendar} className="usere"></img>Calendrier
+        </Link>
+        </h1>
         </div>
         <button className="button1"> <span className="bute">Quitter</span>
         </button>
         </div>)
         }
         <div className="index">
+        {children}
         {/* <Acceulle></Acceulle> */}
         {/* <Decomposerprojet></Decomposerprojet> */}
-        <Meeting></Meeting>
+        {/* <Meeting></Meeting> */}
       {/* <Consulterprojet></Consulterprojet> */}
       {/* <Dashboards></Dashboards> */}
       {/* <Calendrier></Calendrier> */}

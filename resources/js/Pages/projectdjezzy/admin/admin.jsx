@@ -24,8 +24,13 @@ import Message from "./message";
 import Notification from "./notification";
 import Messenger from "./messenger";
 import { useState } from "react";
+import { Link, usePage} from '@inertiajs/react';
+import NavLink from '@/Components/NavLink';
 
-function Admin() {
+
+function Admin({children}) {
+       const {url}=usePage();
+       const isactive=(route)=>url.includes(route);
        const [image,setimage]=useState(mnu);
        const [show,setshow]=useState(true);
        const [color,setcolor]=useState("brown");
@@ -72,24 +77,60 @@ function Admin() {
         <h1 className="username">Zoui Mohamed</h1>
         <p className="job">ADMINISTRATOR</p>
         <div className="space">
-        <h1 className="sidemenu" onClick={backgroundchange}><img src={home} className="usere"></img>Acceuil</h1>
-        <h1 className="sidemenu"><img src={usere} className="usere"></img>Gestion Compte</h1>
-        <h1 className="sidemenu"><img src={send} className="usere"></img>Envoyer Demande</h1>
-        <h1 className="sidemenu"><img src={consulter} className="usere"></img>Consulter Projet</h1>
-        <h1 className="sidemenu"><img src={menu} className="usere"></img>Archiver Projet</h1>
-        <h1 className="sidemenu"><img src={dashboard} className="usere"></img>Dashboard</h1>
-        <h1 className="sidemenu"><img src={calendar} className="usere"></img>Calendrier</h1>
+        <h1 className="sidemenu" style={{background : isactive('/posts/acceulle')? 'red':'#831010'}}>
+        <Link href={route('acceulle.index')} active={route().current('acceulle.index')}>
+    <img src={home} className="usere"></img>Acceuil
+  </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/posts/gestioncompte')? 'red':'#831010'}} >
+        <Link href={route('gestioncompte.index')} active={route().current('gestioncompte.index')}>
+        <img src={usere} className="usere"></img>Gestion Compte
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/posts/envoyerdemande')? 'red':'#831010'}}>
+        <Link href={route('envoyerdemande.index')} active={route().current('envoyerdemande.index')}>
+        <img src={send} className="usere"></img>Envoyer Demande
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/posts/consulterprojet')? 'red':'#831010'}}>
+        <Link href={route('consulterprojet.index')} active={route().current('consulterprojet.index')}>
+        <img src={consulter} className="usere"></img>Consulter Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/posts/archiverprojet')? 'red':'#831010'}}>
+        <Link href={route('archiverprojet.index')} active={route().current('archiverprojet.index')}>
+        <img src={menu} className="usere"></img>Archiver Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/posts/dashboard')? 'red':'#831010'}}>
+        <Link href={route('dashboard.index')} active={route().current('dashboard.index')}>
+        <img src={dashboard} className="usere"></img>Dashboard
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/posts/calendrier')? 'red':'#831010'}}>
+        <Link href={route('calendrier.index')} active={route().current('calendrier.index')}>
+        <img src={calendar} className="usere"></img>Calendrier
+        </Link>
+        </h1>
         </div>
         <button className="button1"> <span className="bute">Quitter</span>
         </button>
         </div>)
         }
         <div className="index">
+          {children}
+
+        {/* <NavLink href={route('acceulle.index')} active={route().current('acceulle.index')}>
+                                acceulle
+        </NavLink> */}
+
+
+
         {/* <Acceulle></Acceulle> */}
       {/* <Gestioncompte></Gestioncompte> */}
       {/* <Envoyerdemande></Envoyerdemande> */}
       {/* <Consulterprojet></Consulterprojet> */}
-      <Archiverprojet></Archiverprojet>
+      {/* <Archiverprojet></Archiverprojet> */}
       {/* <Dashboards></Dashboards> */}
       {/* <Calendrier></Calendrier> */}
         </div>

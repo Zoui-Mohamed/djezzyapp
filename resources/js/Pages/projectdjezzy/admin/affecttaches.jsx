@@ -6,6 +6,7 @@ import done from "../images/check-double-line.png";
 import Affectduree from "./affectdurretache";
 import { useState } from "react";
 import Affectemployer from "./affectemployertaches";
+import Traficmanager from "./traficmanager";
 
 
 
@@ -23,6 +24,7 @@ function Affecttation(){
     };
 
     return(
+        <Traficmanager>
      <div >
          {
     openpopup && <Affectduree editpopup= {editpopup}></Affectduree>
@@ -107,6 +109,7 @@ function Affecttation(){
            </div>
        </div>
        </div>
+       </Traficmanager>
        )
 }
 

@@ -2,7 +2,9 @@ import "./admin.css";
 import { PieChart, Pie, Sector, Cell} from 'recharts';
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import Admin from "./admin";
+import Directeurgenerale from "./directeurgeneral";
+import Employer from "./employer";
+import Traficmanager from "./traficmanager";
 
 
 const data = [
@@ -119,10 +121,10 @@ const data = [
   ];
   
 
-function Dashboards(){
+function Dashboardstm(){
     const demoUrl = 'https://codesandbox.io/p/sandbox/simple-area-chart-4y9cnl';
     return(
-      <Admin>
+      <Traficmanager>
      <div >
         <div className="dashboardone">
             <div className="dashonecontain">
@@ -256,9 +258,9 @@ function Dashboards(){
             </div>
         </div>
     </div>
-    </Admin>
+    </Traficmanager>
     )
 }
 
 
-export default Dashboards;
+export default Dashboardstm;

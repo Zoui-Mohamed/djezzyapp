@@ -1,10 +1,11 @@
-import Admin from "./admin";
 import "./admin.css";
+import Directeurgenerale from "./directeurgeneral";
+import Employer from "./employer";
 
 
-function Calendrier(){
+function Calendrierem(){
     return(
-        <Admin>
+        <Employer>
      <div >
         <h1 className="calender-title">Calendrier Des Meeting</h1>
         <div className="calcontains">
@@ -47,9 +48,9 @@ function Calendrier(){
             </div>
         </div>
     </div>
-    </Admin>
+    </Employer>
     )
 }
 
 
-export default Calendrier;
+export default Calendrierem;

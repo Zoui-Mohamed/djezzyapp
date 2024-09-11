@@ -28,8 +28,13 @@ import Messenger from "./messenger";
 import Gestiontaches from "./gestiontache";
 import Affecttation from "./affecttaches";
 import { useState } from "react";
+import { Link, usePage} from '@inertiajs/react';
+import NavLink from '@/Components/NavLink';
 
-function Traficmanager() {
+function Traficmanager({children}) {
+      const {url}=usePage();
+      const isactive=(route)=>url.includes(route);
+
        const [image,setimage]=useState(mnu);
        const [show,setshow]=useState(true);
        const [color,setcolor]=useState("brown");
@@ -75,22 +80,51 @@ function Traficmanager() {
         <h1 className="username">Zoui Mohamed</h1>
         <p className="job">TRAFIC MANAGER</p>
         <div className="space">
-        <h1 className="sidemenu" onClick={backgroundchange}><img src={home} className="usere"></img>Acceuil</h1>
-        <h1 className="sidemenu"><img src={gest} className="usere"></img>Gestion Taches</h1>
-        <h1 className="sidemenu"><img src={affect} className="usere"></img>Affectation Taches</h1>
-        <h1 className="sidemenu"><img src={send} className="usere"></img>Envoyer Demande</h1>
-        <h1 className="sidemenu"><img src={consulter} className="usere"></img>Consulter Projet</h1>
-        <h1 className="sidemenu"><img src={dashboard} className="usere"></img>Dashboard</h1>
-        <h1 className="sidemenu"><img src={calendar} className="usere"></img>Calendrier</h1>
+        <h1 className="sidemenu" style={{background : isactive('/traficmanager/acceilletm')? 'red':'#831010'}}>
+        <Link href={route('acceilletm.index')} active={route().current('acceilletm.index')}>
+        <img src={home} className="usere"></img>Acceuil
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/traficmanager/gestiontache')? 'red':'#831010'}}>
+        <Link href={route('gestiontache.index')} active={route().current('gestiontache.index')}>
+        <img src={gest} className="usere"></img>Gestion Taches
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/traficmanager/affecttaches')? 'red':'#831010'}}>
+        <Link href={route('affecttaches.index')} active={route().current('affecttaches.index')}>
+        <img src={affect} className="usere"></img>Affectation Taches
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/traficmanager/envoyerdemandetm')? 'red':'#831010'}}>
+        <Link href={route('envoyerdemandetm.index')} active={route().current('envoyerdemandetm.index')}>
+        <img src={send} className="usere"></img>Envoyer Demande
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/traficmanager/consulterprojettm')? 'red':'#831010'}}>
+        <Link href={route('consulterprojettm.index')} active={route().current('consulterprojettm.index')}>
+        <img src={consulter} className="usere"></img>Consulter Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/traficmanager/dashboardtm')? 'red':'#831010'}}>
+        <Link href={route('dashboardtm.index')} active={route().current('dashboardtm.index')}>
+        <img src={dashboard} className="usere"></img>Dashboard
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/traficmanager/calendriertm')? 'red':'#831010'}}>
+        <Link href={route('calendriertm.index')} active={route().current('calendriertm.index')}>
+        <img src={calendar} className="usere"></img>Calendrier
+        </Link>
+        </h1>
         </div>
         <button className="button1"> <span className="bute">Quitter</span>
         </button>
         </div>)
         }
         <div className="index">
+          {children}
         {/* <Acceulle></Acceulle> */}
         {/* <Gestiontaches></Gestiontaches> */}
-        <Affecttation></Affecttation>
+        {/* <Affecttation></Affecttation> */}
       {/* <Envoyerdemande></Envoyerdemande> */}
       {/* <Consulterprojet></Consulterprojet> */}
       {/* <Dashboards></Dashboards> */}

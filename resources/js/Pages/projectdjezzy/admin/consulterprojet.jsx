@@ -1,9 +1,11 @@
 import "./admin.css";
 import search from '../images/search-line (2).png';
 import timer from '../images/timer-line.png';
+import Admin from "./admin";
 
 function Consulterprojet(){
     return(
+        <Admin>
      <div >
         <div className="search-bar">
     <input class="search" type="search" placeholder="Search Here" />
@@ -76,6 +78,7 @@ function Consulterprojet(){
         </div>
     </div>
     </div>
+    </Admin>
     )
 }
 

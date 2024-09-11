@@ -28,18 +28,22 @@ import Calendrier from "./calendrier";
 import Message from "./message";
 import Notification from "./notification";
 import Messenger from "./messenger";
-import { useState } from "react";
+import { Children, useState } from "react";
 import Gestionprojet from "./gestionprojet";
 import Evaluerprojet from "./evaluerprojet";
 import Decomposerprojet from "./decomposerprojet";
 import Meeting from "./lancermeeting";
 import Fintaches from "./findetaches";
+import { Link, usePage} from '@inertiajs/react';
+import NavLink from '@/Components/NavLink';
 
 
 
 
+function Employer({children}) {
+  const {url}=usePage();
+  const isactive=(route)=>url.includes(route);
 
-function Employer() {
        const [image,setimage]=useState(mnu);
        const [show,setshow]=useState(true);
        const [color,setcolor]=useState("brown");
@@ -85,20 +89,45 @@ function Employer() {
         <h1 className="username">Zoui Mohamed</h1>
         <p className="job">EMPLOYER</p>
         <div className="space">
-        <h1 className="sidemenu" onClick={backgroundchange}><img src={home} className="usere"></img>Acceuil</h1>
-        <h1 className="sidemenu"><img src={checked} className="usere"></img>Fin de taches</h1>
-        <h1 className="sidemenu"><img src={send} className="usere"></img>Envoyer Demande</h1>
-        <h1 className="sidemenu"><img src={consulter} className="usere"></img>Consulter Projet</h1>
-        <h1 className="sidemenu"><img src={dashboard} className="usere"></img>Dashboard</h1>
-        <h1 className="sidemenu"><img src={calendar} className="usere"></img>Calendrier</h1>
+        <h1 className="sidemenu" style={{background : isactive('/employer/acceilleem')? 'red':'#831010'}}>
+        <Link href={route('acceilleem.index')} active={route().current('acceilleem.index')}>
+        <img src={home} className="usere"></img>Acceuil
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/employer/findetaches')? 'red':'#831010'}}>
+        <Link href={route('findetaches.index')} active={route().current('findetaches.index')}>
+        <img src={checked} className="usere"></img>Fin de taches
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/employer/envoyerdemandeem')? 'red':'#831010'}}>
+        <Link href={route('envoyerdemandeem.index')} active={route().current('envoyerdemandeem.index')}>
+        <img src={send} className="usere"></img>Envoyer Demande
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/employer/consulterprojetem')? 'red':'#831010'}}>
+        <Link href={route('consulterprojetem.index')} active={route().current('consulterprojetem.index')}>
+        <img src={consulter} className="usere"></img>Consulter Projet
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/employer/dashboardem')? 'red':'#831010'}}>
+        <Link href={route('dashboardem.index')} active={route().current('dashboardem.index')}>
+        <img src={dashboard} className="usere"></img>Dashboard
+        </Link>
+        </h1>
+        <h1 className="sidemenu" style={{background : isactive('/employer/calendrierem')? 'red':'#831010'}}>
+        <Link href={route('calendrierem.index')} active={route().current('calendrierem.index')}>
+        <img src={calendar} className="usere"></img>Calendrier
+        </Link>
+        </h1>
         </div>
         <button className="button1"> <span className="bute">Quitter</span>
         </button>
         </div>)
         }
         <div className="index">
+          {children}
         {/* <Acceulle></Acceulle> */}
-        <Fintaches></Fintaches>
+        {/* <Fintaches></Fintaches> */}
         {/* <Envoyerdemande></Envoyerdemande> */}
       {/* <Consulterprojet></Consulterprojet> */}
       {/* <Dashboards></Dashboards> */}

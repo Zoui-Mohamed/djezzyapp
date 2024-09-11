@@ -8,6 +8,8 @@ import { useState } from "react";
 import Ajouterprojet from "./ajouterprojet";
 import Editprojet from "./editprojet";
 import Projetplus from "./plusprojet";
+import Directeurgenerale from "./directeurgeneral";
+
 
 
 
@@ -31,6 +33,7 @@ function Gestionprojet(){
     };
 
     return(
+        <Directeurgenerale>
      <div >
                {
     openpopup && <Ajouterprojet editpopup= {editpopup}></Ajouterprojet>
@@ -161,6 +164,7 @@ function Gestionprojet(){
     </div>
 
     </div>
+    </Directeurgenerale>
     )
 }
 

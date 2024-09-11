@@ -4,6 +4,7 @@ import plus from '../images/plus.png';
 import evaluation from "../images/list-ordered.png";
 import Evaprojet from "./evaprojet";
 import { useState } from "react";
+import Directeurgenerale from "./directeurgeneral";
 
 
 
@@ -18,6 +19,7 @@ function Evaluerprojet(){
 
 
     return(
+        <Directeurgenerale>
      <div >
                {
     openpopup && <Evaprojet editpopup= {editpopup}></Evaprojet>
@@ -93,6 +95,7 @@ function Evaluerprojet(){
         </div>
     </div>
     </div>
+    </Directeurgenerale>
     )
 }
 

@@ -2,10 +2,11 @@ import "./admin.css";
 import illustartion from'../images/illustration.png';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { useState } from "react";
-import Admin from "./admin";
+import Directeurgenerale from "./directeurgeneral";
+import Employer from "./employer";
 
 
-function Envoyerdemande(){
+function Envoyerdemandeem(){
   const { data, setData, post, processing, errors, reset } = useForm({
     utlisateur: '',
     nomdemande: '',
@@ -21,7 +22,7 @@ const submit = (e) => {
     });
 };
     return(
-        <Admin>
+        <Employer>
      <div >
       <form onSubmit={submit}>
        <h1 className="helpstyle">Let's Help You</h1>
@@ -39,9 +40,9 @@ const submit = (e) => {
        </div>
        </form>
     </div>
-    </Admin>
+    </Employer>
     )
 }
 
 
-export default Envoyerdemande;
+export default Envoyerdemandeem;

@@ -7,6 +7,7 @@ import timer from '../images/timer-line.png';
 import { useState } from "react";
 import Ajoutertache from "./ajoutertaches";
 import Modifiertache from "./modifiertaches";
+import Traficmanager from "./traficmanager";
 
 
 
@@ -24,6 +25,7 @@ function Gestiontaches(){
     };
 
     return(
+        <Traficmanager>
      <div >
          {
     openpopup && <Ajoutertache editpopup= {editpopup}></Ajoutertache>
@@ -129,6 +131,7 @@ function Gestiontaches(){
     </div>
 
     </div>
+    </Traficmanager>
     )
 }
 

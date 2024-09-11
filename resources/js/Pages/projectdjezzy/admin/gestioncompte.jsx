@@ -6,6 +6,7 @@ import edit from '../images/edit-box-fill (1).png';
 import { useState } from "react";
 import Ajoutercompte from "./ajoutercompte";
 import Editcompte from "./editcompte";
+import Admin from "./admin";
 
 
 function Gestioncompte(){
@@ -23,6 +24,7 @@ function Gestioncompte(){
     };
 
     return(
+        <Admin>
      <div >
          {
     openpopup && <Ajoutercompte editpopup= {editpopup}></Ajoutercompte>
@@ -136,6 +138,7 @@ function Gestioncompte(){
     </div>
 
     </div>
+    </Admin>
     )
 }
 
